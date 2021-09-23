@@ -1,0 +1,27 @@
+
+/* span {
+    background-color: bisque;
+} */
+
+#firstID {
+    background-color: bisque;
+    font-weight: bold;
+}
+
+.firstClass {
+    background-color: red;
+    font-weight: bold;
+}
+
+.secondClass {
+    border: solid 1px lightblue;
+}
+
+
+.margin-lr {
+    margin: 0 10px 0 10px;
+}
+
+#spanID {
+    display: none   ;
+}

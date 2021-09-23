@@ -1,0 +1,17 @@
+p {
+    color:blue;text-align: justify;
+    font-size: 20px;
+    font-weight: bold;   
+    /* margin :10px 20px 30px 40px; */
+    padding: 10px;
+ }
+ h2 {
+     background-color: aqua;
+     border : 2px dotted red;
+ }
+
+ img {
+     width: 500px;
+     height: 300px;
+     border-radius: 20px;
+ }
