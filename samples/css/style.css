@@ -5,7 +5,7 @@ p {
     /* margin :10px 20px 30px 40px; */
     padding: 10px;
  }
- h2 {
+ h2,h3,h4 {
      background-color: aqua;
      border : 2px dotted red;
  }
@@ -15,3 +15,28 @@ p {
      height: 300px;
      border-radius: 20px;
  }
+
+.name {
+    font-size: 20px;
+    color: #19b9e8;
+    background-color: #a8dc2a;
+    font-weight: bold;
+    text-align: center;
+}
+#uncle {
+    display: none;
+}
+
+
+p.test .spantest {
+    color : orange
+}
+
+.border-p {
+    border: 2px solid red;
+}
+
+.border-p:hover {
+    color : blueviolet !important;
+    border-radius : 50px;
+}
