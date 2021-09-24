@@ -29,7 +29,8 @@ p {
 
 
 p.test .spantest {
-    color : orange
+    color : orange;
+    border-radius : 50px;
 }
 
 .border-p {
