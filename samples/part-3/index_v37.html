@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fa" >
+<head>
+  <title>js</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/style-theme.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <h1 id="js-sample"></h1>
+    <div class="container">
+        <button class="btn btn-success" type="click" onclick=" document.getElementById('time').innerHTML =Date()">what time is it ?  </button>
+        <p id="time"></p>
+        <div class="row">
+            <div class="col-md-12" style="min-height: 250px;">
+                <img  id="test-img" src="static/img/feragh.jpg" alt="">
+
+            </div>
+            <button class="btn btn-danger" type="click" onclick=" document.getElementById('test-img').style.display ='none'">delete image</button>
+            <button class="btn btn-success" type="click" onclick=" document.getElementById('test-img').style.display ='block'">show image</button>
+            <p> sum 5 + 10  = <span id="res"></span></p>
+        </div>
+        <p id="demo"></p>
+        <button class="btn btn-warning" onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+        <button class="btn btn-warning" onclick="this.innerHTML = Date()">The time is?</button>
+        <button class="btn btn-warning" onclick="firstFun()">test function</button>
+        <button class="btn btn-success" id="statusBtn"  onclick="setAttr()">enable </button>
+
+        <div class="col-md-12">
+            <hr>
+            <table class="table responsive">
+                <thead>
+                    <th>id</th>
+                    <th>text</th>
+                    <th>text</th>
+                    <th>text</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>alex</td>
+                        <td>alex</td>
+                        <td>alex</td>
+                        <td>
+                            <!-- <button class="btn btn-primary">edit</button> -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="edit_row_table(this)" >
+                                modal
+                             </button>
+                        </td>
+                        <td>
+                            <span class="btn btn-danger" onclick="delete_row_table(this)">delete</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>alex</td>
+                        <td>alex</td>
+                        <td>alex</td>
+                        <td>
+                            <!-- <button class="btn btn-primary">edit</button> -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                modal
+                             </button>
+                        </td>
+                        <td>
+                            <span class="btn btn-danger" onclick="delete_row_table(this)">delete</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>alex</td>
+                        <td>alex</td>
+                        <td>alex</td>
+                        <td>
+                            <!-- <button class="btn btn-primary">edit</button> -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                modal
+                             </button>
+                        </td>
+                        <td>
+                            <span class="btn btn-danger" onclick="delete_row_table(this)">delete</span>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>alex</td>
+                        <td>alex</td>
+                        <td>alex</td>
+                        <td>
+                            <!-- <button class="btn btn-primary">edit</button> -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                modal
+                             </button>
+                        </td>
+                        <td>
+                            <span class="btn btn-danger" onclick="delete_row_table(this)">delete</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>alex</td>
+                        <td>alex</td>
+                        <td>alex</td>
+                        <td>
+                            <!-- <button class="btn btn-primary">edit</button> -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                 modal
+                              </button>
+                        </td>
+                        <td>
+                            <span class="btn btn-danger" onclick="delete_row_table(this)">delete</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            نام خود را وارد کنید: <input type="text" id="fname" onchange="upperCase()">
+            <small>تبدیل حروف کوچک انگلیسی به حروف برزگ</small>
+            <hr>
+            <div class="row">
+                
+                <div class="col-9">
+                    <h3>تغییر عکس </h3>
+                    <small>با استفاده از addEventListener</small>
+                    <img class="thumbnail w-100" id="change-img-section" src="static/img/b.jpeg" alt="" > <br>   
+                </div>
+                <div class="col-3">
+
+                    <button class="btn btn-secondary change-img" id="change-img" >change img</button>
+                </div>
+               
+            </div>
+            <hr>
+        </div>
+
+
+
+        <div class="col-12">
+          
+            <div class="col-md-6">
+                <h3>لینک دونی</h3>
+               <div class="card" style="width: 18rem;">
+                   <ul class="list-group list-group-flush">
+                     <li class="list-group-item">
+                         <a href="https://www.w3schools.com/js/js_events.asp">js event</a>
+                     </li>
+                     <li class="list-group-item">
+                         <a href="https://www.w3schools.com/js/js_strings.asp">js string</a>
+                     </li>
+                     <li class="list-group-item">
+                         <a href="https://www.w3schools.com/js/js_string_templates.asp">${}</a>
+                     </li>
+                     <li class="list-group-item">
+                         <a href="https://www.w3schools.com/js/js_number_methods.asp">parseInt/pasreFloat</a>
+                     </li>
+                     <li class="list-group-item">
+                         <a href="https://www.w3schools.com/js/js_array_methods.asp">array method</a>
+                     </li>
+                     <li class="list-group-item">
+                         <a href="https://www.w3schools.com/js/js_array_iteration.asp">map/filter</a>
+                     </li>
+                     <li class="list-group-item">
+                         <a href="https://www.w3schools.com/js/js_htmldom_events.asp">event sample</a>
+                     </li>
+                     <li class="list-group-item">
+                         <a href="https://www.w3schools.com/js/js_htmldom_eventlistener.asp">The addEventListener() method</a>
+                     </li>
+                   </ul>
+                 </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- End Modal -->
+<script>
+    var a = "maktab sharif"
+    document.getElementById('js-sample').innerHTML ='سلام'    
+    document.getElementById('test-img').style.width ='100%';    
+    document.getElementById('test-img').style.height ='250px';    
+    document.getElementById('res').innerHTML = 5+10   
+    
+    // window.alert(5 + 6);
+
+    function firstFun(){
+        console.log('test functon')
+        document.getElementById('demo').innerHTML = Date()
+    }
+    function setAttr(){
+        console.log('test functon',)
+        btn  =document.getElementById('statusBtn')
+        
+        if(btn.getAttribute('status') == "disable"){
+            btn.innerHTML = 'enable'
+            btn.setAttribute('status','enable')
+            btn.classList.remove("btn-danger");
+            btn.classList.add("btn-success");
+        }
+        else {
+            btn.innerHTML = 'disable'
+            btn.setAttribute('status','disable')
+            
+            btn.classList.remove("btn-success");
+            btn.classList.add("btn-danger");
+        }    
+        console.log(btn.getAttribute('status'))
+
+    }
+    function delete_row_table(that){
+        console.log('mohammad')
+        
+        console.log('this ',that.classList)
+        console.log(that.closest('tr'))
+        that_tr = that.closest('tr').remove()
+        // alert('row remove ')
+    }
+
+    function edit_row_table(that){
+       
+        console.log(that)
+        that_tr = that.closest('tr')
+        console.log(that.closest('tr'))
+        modal_body = document.getElementsByClassName('modal-body')
+        paragraph = document.createElement("p");
+
+        // node = document.createTextNode("This is new.");
+        // paragraph.appendChild(node);
+        // modal_body[0].appendChild(paragraph)
+        td_1 = that_tr.getElementsByTagName('td')[0].innerText
+        td_2 = that_tr.getElementsByTagName('td')[1].innerText
+        td_3 = that_tr.getElementsByTagName('td')[2].innerText
+        td_4 = that_tr.getElementsByTagName('td')[3].innerText
+        node = document.createTextNode(td_1 + " " + td_2+ " "+ td_3 + " "+ td_4);
+        paragraph.appendChild(node);
+        modal_body[0].appendChild(paragraph)
+    }
+    function upperCase() {
+        const x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+
+    // اگر این خط فعال کنیم مشکلی پیش میاد
+    // document.getElementsByClassName('change-img').addEventListener('click',change_img)
+    document.getElementById('change-img').addEventListener('click',change_img)
+
+    function change_img(){
+        console.log('testtttttttttttttttt')
+        
+        src  = document.getElementById('change-img-section').getAttribute('src') 
+        console.log('old src',src)
+        new_src = "static/img/i.png"
+        document.getElementById('change-img-section').setAttribute('src',new_src)
+
+
+    }
+ 
+</script>
+
+</body>
+</html>
