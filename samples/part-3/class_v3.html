@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap class</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="static/style-theme.css"> -->
+  <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container my-2">
+        <button type="click" class="btn btn-danger" onclick="document.getElementById('time-section').innerHTML = 'maktab'">نمایش ساعت</button>
+        <button type="click" class="btn btn-danger" onclick="document.getElementById('time-section').style.fontSize = '50px'">فونت</button>
+        <button type="click" class="btn btn-primary" onclick="showTime()">تابع</button>
+        <button type="click" class="btn btn-primary" onmouseover="showOnmouseOver()">onmouseover</button>
+        <button type="click" class="btn btn-primary" onclick="addlorem()">افزودن</button>
+
+        <p id="time-section">salam</p>
+        <p> sum = 5 * 10 =<span id="res-sum" ></span> </p>
+    </div>
+    <div class="col-md-12">
+        <div class="loerm">
+          
+        </div>
+
+        <div class="loerm">
+          
+        </div>
+        <div class="loerm">
+          
+        </div>
+    </div>
+
+    <script>
+        var mouseOver_count = 0;
+        document.getElementById('res-sum').innerHTML = 5*10
+        function showTime(){
+            console.log('i am in showTime')
+            selected = document.getElementById('time-section')
+            selected.innerHTML = Date()
+            // selected.style.fontSize = "30px"
+            document.getElementById('res-sum').style.display = "none"
+            alert('داداش این رفتش')
+
+        }
+        function showOnmouseOver(){
+            mouseOver_count +=1;
+            console.log('showOnmouseOver : showOnmouseOver',mouseOver_count)
+        }
+        function addlorem(){
+            console.log('addlorem')
+            // document.getElementById('loerm').innerHTML = 'sdf'
+            let selected = document.getElementsByClassName('loerm')[0]
+            // ایجاد تگ  p
+             let tag_p = document.createElement('p')
+            // ایجاد متن
+            let text_for_p = document.createTextNode('نبودن در ایران')
+            // دادن متن به تگ
+            tag_p.appendChild(text_for_p)
+            // افزودن تگ p  به  تگ اصلی
+            selected.appendChild(tag_p)
+        }
+
+    </script>
+</body>
+
+</html>
