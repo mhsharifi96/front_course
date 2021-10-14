@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container py-3">
+
+        <button type="click" class="btn btn-success" id="showTime"> time</button>
+    </div>
+    <div class="container py-3">
+
+       <div class="col-md-12">
+           <div class="row" id="dom-test">
+               <div class="col-4">
+                   <div class="row">
+                       <div class="col-7">col-7</div>
+                       <div class="col-5">col-5</div>
+                   </div>
+               </div>
+               <div class="col-4">col-4</div>
+               <div class="col-4">col-4</div>       
+           </div>
+       </div>
+       <div class="row">
+           <pre>
+            run below code in console :
+               <code>
+                selected = document.getElementById('dom-test')
+                selected.childElementCount
+                selected.children
+                selected.firstElementChild.firstElementChild
+                selected.children[2]
+                selected.firstElementChild.lastElementChild.lastElementChild
+
+                window.location.reload()
+                
+               </code>
+           </pre>
+       </div>
+    </div>
+
+
+
+    <script>
+        document.getElementById('showTime').addEventListener('click',displyDate)
+        document.getElementById('showTime').addEventListener('mouseover',displyDate)
+
+        function displyDate(){
+            alert(Date())
+        }
+        document.cookie = "name=nigamamdmamdf; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+    </script>
+</body>
+</html>

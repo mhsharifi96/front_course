@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax - step 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="row my-3">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+        $.get('https://reqres.in/api/users',function(data,status){
+            console.log('status',status)
+
+            console.log(data.data)
+            $.each(data.data,function(index,value){
+                console.log(index +' : ',value)
+                li_tag = "<li>"+index+ ' - '+ value.email +"</li>"
+                $('.row ul').append(li_tag)
+            })           
+        })
+    })
+
+    </script>
+    
+</body>
+</html>

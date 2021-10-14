@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax - step 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="row my-3">
+            <div class="card w-100">
+                <div class="card-body">
+                  get user list
+                  <button id="getDataBtn" class="btn btn-primary float-right">get Data</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table responsive" id="userTable">
+                <thead>
+                    <th>id</th>
+                    <th>email</th>
+                    <th>first name</th>
+                    <th>last name</th>
+                    <th>avatar</th>
+                    <th>delete</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <script>
+        $(function(){
+        $('#getDataBtn').click(function(){
+            $.get('https://reqres.in/api/users',function(data,status){
+                console.log('status',status)
+    
+                console.log(data.data)
+                deleteBtn = "<span class='btn btn-danger removeUser'>delete</span>"
+                
+                $.each(data.data,function(index,value){
+    
+                    tr_row ="<tr>"
+                        +`<td>${value.id}</td>`
+                        +`<td>${value.email}</td>`
+                        +`<td>${value.first_name}</td>`
+                        +`<td>${value.last_name}</td>`
+                        +`<td><img src="${value.avatar}" alt="" style="width:50px" ></td>`
+                        +`<td>${deleteBtn}</td>`
+                        +"</tr>"
+                        
+                    // console.log(index +' : ',tr_row)
+                    $('#userTable>tbody').append(tr_row)
+                })           
+            })
+        })
+
+        $('.removeUser').click(function(){
+            alert('delete this user')
+        })
+        // $('body').on('click','.removeUser',function(){
+        //     // $(this).remove()
+        //     // alert('delete this user')
+        // })
+    })
+
+    </script>
+    
+</body>
+</html>
