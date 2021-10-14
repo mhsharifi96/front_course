@@ -32,15 +32,18 @@
         <button class="btn btn-success" id="statusBtn"  onclick="setAttr()">enable </button>
 
         <div class="col-md-12">
+            
             <hr>
             <table class="table responsive">
                 <thead>
                     <th>id</th>
-                    <th>text</th>
-                    <th>text</th>
-                    <th>text</th>
+                    <th>name</th>
+                    <th>lastname</th>
+                    <th>address</th>
+                    <th>status</th>
                     <th>edit</th>
                     <th>delete</th>
+                    <th>copy</th>
                 </thead>
                 <tbody>
                     <tr>
@@ -48,6 +51,9 @@
                         <td>alex</td>
                         <td>alex</td>
                         <td>alex</td>
+                        <td>
+                            <button type="submit" class="btn btn-success"> enable</button>
+                        </td>
                         <td>
                             <!-- <button class="btn btn-primary">edit</button> -->
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="edit_row_table(this)" >
@@ -57,12 +63,18 @@
                         <td>
                             <span class="btn btn-danger" onclick="delete_row_table(this)">delete</span>
                         </td>
+                        <td>
+                            <button class="btn btn-secondary"> copy</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>alex</td>
                         <td>alex</td>
                         <td>alex</td>
+                        <td>
+                            <button type="submit" class="btn btn-warning"> not set</button>
+                        </td>
                         <td>
                             <!-- <button class="btn btn-primary">edit</button> -->
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -72,12 +84,18 @@
                         <td>
                             <span class="btn btn-danger" onclick="delete_row_table(this)">delete</span>
                         </td>
+                        <td>
+                            <button class="btn btn-secondary"> copy</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>alex</td>
                         <td>alex</td>
                         <td>alex</td>
+                        <td>
+                            <button type="submit" class="btn btn-danger"> diable</button>
+                        </td>
                         <td>
                             <!-- <button class="btn btn-primary">edit</button> -->
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -88,37 +106,11 @@
                             <span class="btn btn-danger" onclick="delete_row_table(this)">delete</span>
                             
                         </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>alex</td>
-                        <td>alex</td>
-                        <td>alex</td>
                         <td>
-                            <!-- <button class="btn btn-primary">edit</button> -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                modal
-                             </button>
-                        </td>
-                        <td>
-                            <span class="btn btn-danger" onclick="delete_row_table(this)">delete</span>
+                            <button class="btn btn-secondary"> copy</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>alex</td>
-                        <td>alex</td>
-                        <td>alex</td>
-                        <td>
-                            <!-- <button class="btn btn-primary">edit</button> -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                 modal
-                              </button>
-                        </td>
-                        <td>
-                            <span class="btn btn-danger" onclick="delete_row_table(this)">delete</span>
-                        </td>
-                    </tr>
+                    
                 </tbody>
             </table>
             نام خود را وارد کنید: <input type="text" id="fname" onchange="upperCase()">
