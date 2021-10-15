@@ -1,40 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ajax - step 1</title>
+    <title>jQuery - in class</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+    <script>
+        $(document).ready(function(){
+            $('.btn').click(function(){
+                console.log('im here')
+                alert('yessssssssssssssssssssss')
+            })
+        });
+
+    </script>
 </head>
 <body>
 
-    <div class="container ">
-        
-        <div class="row my-1">
-            <ul>
-
-            </ul>
+    <div class="container my-2">
+        <div class="col-md-12">
+            <div class="row">
+                <!-- <p> سلام بچه ها</p> -->
+                <button class="btn btn-primary">BTN</button>
+                <button class="btn btn-danger">BTN</button>
+            </div>
         </div>
+
     </div>
-
-    <script>
-       $(function(){
-           $.get('https://reqres.in/api/users/2',function(data){
-               console.log('data',data)
-   
-               $('.row ul').append('<li>'+data.data.email+'</li>')
-               $('.row ul').append('<li>'+data.data.avatar+'</li>')
-           })
-
-       })
-
-    </script>
+    
     
 </body>
 </html>

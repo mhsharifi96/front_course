@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax - step 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+
+    <div class="container ">
+        <div class="row my-1">
+          
+         <ul class='detail-user'>
+             
+         </ul>
+        </div>
+        <div class="row my-2">
+            <div class="col-2">
+
+                <button class="btn btn-info" id="getDetail">get detail</button>
+            </div>
+            <div class="col-10">
+                <ul class='detail-user-btn'></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          
+
+            $('#getDetail').click(function(){
+                console.log('click shod')
+                $.get('https://reqres.in/api/users',function(response,status){
+                    console.log(response.data)
+                    $.each(response.data,function(index,value){
+                        console.log(index +':',value)
+                        $('.detail-user-btn').append('<li>'+value.first_name+'</li>')
+
+                    })
+                    console.log(response.data.length)
+                // console.log('data',response.data.email)
+                // data = response.data
+                // $('.detail-user-btn').append('<li>'+data.id+'</li>')
+                // $('.detail-user-btn').append('<li>'+data.email+'</li>')
+                // $('.detail-user-btn').append('<li>'+data.email+'</li>')
+                // $('.detail-user-btn').append('<li>'+data.first_name+'</li>')
+                // $('.detail-user-btn').append('<li>'+data.last_name+'</li>')
+                // $('.detail-user-btn').append('<li>'+`<img src="${data.avatar}">`+'</li>')
+                
+                },'json')
+            })
+
+        })
+     
+    </script>
+    
+</body>
+</html>

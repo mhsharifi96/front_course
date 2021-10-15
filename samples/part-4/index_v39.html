@@ -31,17 +31,51 @@
         //      })
 
         // }); 
+        // $('.btn').click({param1: "Hello", param2: "World"},function(e){
+        //         console.log('event',e.data)
+                
+        //     })
     </script>
 </head>
 <body>
 <div class="container my-2">
     <button class="btn btn-success">test jquery</button>
-    <button class="btn btn-primary">test jquery</button>
-    <button class="btn btn-danger">test jquery</button>
+    <button class="btn btn-primary">hide</button>
+    <button class="btn btn-danger" id="show" >show</button>
+    <button class="btn btn-warning" id="toggle" >toggle</button>
+
+    <p>
+        mktab sharif
+    </p>
 </div>
 <script>
+    // $('.btn-primary').click(function(){
+    //     console.log('click btn primary    hooooooooooora :|')
+    // })
     $('.btn-primary').click(function(){
-        console.log('click btn primary    hooooooooooora :|')
+        $('p').hide()
+        // $('p').css('color','red')
+    })
+    $('#show').click(function(){
+        // $('p').show()
+        $('p').css('display','')
+    })
+    $('#toggle').click(function(){
+        // $('p').show()
+        console.log('clicked')
+        console.log($(this))
+        
+        if($(this).hasClass('btn-warning')){
+            $(this).removeClass('btn-warning')
+            $(this).addClass('btn-info')
+            $(this).text('maktab sharif 60')
+        }
+        else {
+            $(this).removeClass('btn-info')
+            $(this).addClass('btn-warning')
+            $(this).text('toggle')
+        }   
+
     })
 </script>
 
