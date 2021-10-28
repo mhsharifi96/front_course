@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDOO Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../part-3/static/font-awesome/css/font-awesome.min.css">
+    <script src="static/js/class.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="col-md-12">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                  <button class="btn btn-primary" productid="1" color="blue" >  click 1</button>
+                  <button class="btn btn-danger"  productid="2" color="red">  click 2</button>
+                </div>
+              </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        $(function () {
+
+            $('.btn').click(function(){
+                console.log('maktab sharif ')
+                proID = $(this).attr('productid')
+                console.log('proID : ',proID)
+                // $.get(url+proID)
+            })
+
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>
