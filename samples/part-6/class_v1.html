@@ -19,12 +19,11 @@
     <div class="container">
         <div class="col-md-12 my-3">
             <select class="form-control" id="exampleFormControlSelect1">
-                <option>user1</option>
-                <option>user2</option>
-                <option>user3</option>
-                <option>user4</option>
-                <option>user5</option>
-                <option>user6</option>
+                <option value="1">user1</option>
+                <option value="2" >user2</option>
+                <option value="3">user3</option>
+                <option value="4">user4</option>
+                
               </select>
 
         </div>
@@ -39,6 +38,28 @@
               </div>
         </div>
     </div>
+
+    <script>
+
+    $(function(){
+
+    // $('select').on('change', function (e) {
+    //         console.log('sfsdfsdlkfasfasdlkfalkfjasdlkf ')
+    //     });
+
+    $('select').change(function(){
+        // مقدار ولیو را پیدا کنم
+        console.log('this ',$(this).val())
+        // درخواست گت بزنم به کجا به ادرس مورد نظر
+        // https://reqres.in/users/ + value
+        // مقادیر دریافت شده را ابتدا مشاهده کنید
+        // مقادیر را جای گذاری کنید
+    })
+
+    })
+
+
+    </script>
 
 
 </body>
